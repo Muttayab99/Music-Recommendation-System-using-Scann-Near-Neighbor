@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Recommendations</h1>
+        <div class="recommendations">
+            <div class="recommendation">
+                <h2>Song Title 1</h2>
+                <p>Artist: Artist Name 1</p>
+                <p>Album: Album Name 1</p>
+                <img src="{{ url_for('static', filename='images/album_artwork1.jpg') }}" alt="Album Artwork 1">
+                <audio controls>
+                    <source src="{{ url_for('static', filename='audio/song1.mp3') }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="recommendation">
+                <h2>Song Title 2</h2>
+                <p>Artist: Artist Name 2</p>
+                <p>Album: Album Name 2</p>
+                <img src="{{ url_for('static', filename='images/album_artwork2.jpg') }}" alt="Album Artwork 2">
+                <audio controls>
+                    <source src="{{ url_for('static', filename='audio/song2.mp3') }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <!-- Add more recommendations below -->
+            <div class="recommendation">
+                <h2>Song Title 3</h2>
+                <p>Artist: Artist Name 3</p>
+                <p>Album: Album Name 3</p>
+                <img src="{{ url_for('static', filename='images/album_artwork3.jpg') }}" alt="Album Artwork 3">
+                <audio controls>
+                    <source src="{{ url_for('static', filename='audio/song3.mp3') }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="recommendation">
+                <h2>Song Title 4</h2>
+                <p>Artist: Artist Name 4</p>
+                <p>Album: Album Name 4</p>
+                <img src="{{ url_for('static', filename='images/album_artwork4.jpg') }}" alt="Album Artwork 4">
+                <audio controls>
+                    <source src="{{ url_for('static', filename='audio/song4.mp3') }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

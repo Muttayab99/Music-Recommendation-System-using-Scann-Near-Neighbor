@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curated Playlists</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Curated Playlists</h1>
+        <div class="playlists">
+            <div class="playlist">
+                <h2>Playlist Title 1</h2>
+                <p>Curator: Curator Name 1</p>
+                <img src="{{ url_for('static', filename='images/playlist_cover1.jpg') }}" alt="Playlist Cover 1">
+                <a href="{{ url_for('playlist_detail', playlist_id=1) }}">View Playlist</a>
+            </div>
+            <div class="playlist">
+                <h2>Playlist Title 2</h2>
+                <p>Curator: Curator Name 2</p>
+                <img src="{{ url_for('static', filename='images/playlist_cover2.jpg') }}" alt="Playlist Cover 2">
+                <a href="{{ url_for('playlist_detail', playlist_id=2) }}">View Playlist</a>
+            </div>
+            <!-- Add more curated playlists as needed -->
+            <div class="playlist">
+                <h2>Playlist Title 3</h2>
+                <p>Curator: Curator Name 3</p>
+                <img src="{{ url_for('static', filename='images/playlist_cover3.jpg') }}" alt="Playlist Cover 3">
+                <a href="{{ url_for('playlist_detail', playlist_id=3) }}">View Playlist</a>
+            </div>
+            <div class="playlist">
+                <h2>Playlist Title 4</h2>
+                <p>Curator: Curator Name 4</p>
+                <img src="{{ url_for('static', filename='images/playlist_cover4.jpg') }}" alt="Playlist Cover 4">
+                <a href="{{ url_for('playlist_detail', playlist_id=4) }}">View Playlist</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

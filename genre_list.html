@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genre List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Genres</h1>
+        <ul class="genre-list">
+            {% for genre in genres %}
+            <li>
+                <h2>{{ genre.name }}</h2>
+                <p>Description: {{ genre.description }}</p>
+                <a href="{{ url_for('genre_detail', genre_id=genre.id) }}">View Genre</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

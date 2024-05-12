@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Detail</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ artist.name }}</h1>
+        <p>Genre: {{ artist.genre }}</p>
+        <p>Number of Albums: {{ artist.albums.count() }}</p>
+        <h2>Albums</h2>
+        <ul class="album-list">
+            {% for album in artist.albums %}
+            <li>
+                <h3>{{ album.title }}</h3>
+                <p>Release Year: {{ album.release_year }}</p>
+                <h4>Songs:</h4>
+                <ul>
+                    {% for song in album.songs %}
+                    <li>{{ song.title }}</li>
+                    {% endfor %}
+                </ul>
+                <a href="{{ url_for('album_detail', album_id=album.id) }}">View Album</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ genre.name }} Detail</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ genre.name }} Detail</h1>
+        <p>Description: {{ genre.description }}</p>
+
+        <h2>Songs in {{ genre.name }}</h2>
+        <ul class="song-list">
+            {% for song in genre.songs %}
+            <li>
+                <h3>{{ song.title }}</h3>
+                <p>Artist: {{ song.artist.name }}</p>
+                <p>Album: {{ song.album.title }}</p>
+                <audio controls>
+                    <source src="{{ url_for('static', filename='audio/' + song.audio_file) }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

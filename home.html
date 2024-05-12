@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block styles %}
+    <style>
+        /* Add styles for the hero section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        /* Style the button */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff5e5e; /* You can change the background color to fit your design */
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff3b3b; /* Change the hover background color */
+        }
+
+        /* Style the sections */
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        /* Style the featured playlists */
+        .featured-playlists {
+            background-color: #f9f9f9; /* Add a light background color */
+        }
+
+        /* Style the trending tracks */
+        .trending-tracks {
+            background-color: #e6e6e6; /* Add a slightly darker background color */
+        }
+
+        /* Style the track item */
+        .track-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        /* Style the audio player */
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section class="hero">
+        <h1>Spotify</h1>
+        <p>Discover new music, create playlists, and explore trending tracks.</p>
+        <a href="{{ url_for('register') }}" class="btn">Get Started</a>
+    </section>
+
+    <section class="featured-playlists section">
+        <h3>Featured Playlists</h3>
+        <div class="playlist-list">
+            {% for playlist in featured_playlists %}
+                <div class="playlist-item">
+                    <h4>{{ playlist.name }}</h4>
+                    <p>Created by: {{ playlist.creator }}</p>
+                    <a href="{{ url_for('playlist_detail', playlist_id=playlist.id) }}">View Playlist</a>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="trending-tracks section">
+        <h3>Trending Tracks</h3>
+        <div class="track-list">
+            {% for track in trending_tracks %}
+                <div class="track-item">
+                    <h4>{{ track.title }}</h4>
+                    <p>Artist: {{ track.artist }}</p>
+                    <audio controls>
+                        <source src="{{ track.audio }}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
