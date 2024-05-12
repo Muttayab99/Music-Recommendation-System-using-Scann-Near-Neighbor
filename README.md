@@ -112,6 +112,41 @@ Adaptive splitting strategies and parameter tuning techniques enhance robustness
 
 
 
+**Result of Recommendation System:**
+
+Calculating silhouette score based on clustering...
+
+Silhouette Score: 0.2252306704302388
+
+ 
+path_to_your_audio_file.mp3 /home/mutayyab/Documents/dataset/091/091125.mp3
+
+ 
+Top 10 Recommendations Based on Rhythmic Similarity:
+
+ 
+Recommended Track: 091643.mp3 - Similarity Score: 0.369567334651947
+
+Recommended Track: 091992.mp3 - Similarity Score: 0.3840720057487488
+
+Recommended Track: 090003.mp3 - Similarity Score: 0.44844454526901245
+
+Recommended Track: 093442.mp3 - Similarity Score: 0.4810391068458557
+
+Recommended Track: 091635.mp3 - Similarity Score: 0.4901089072227478
+
+Recommended Track: 091773.mp3 - Similarity Score: 0.5003558993339539
+
+Recommended Track: 092273.mp3 - Similarity Score: 0.5029585659503937
+
+Recommended Track: 091828.mp3 - Similarity Score: 0.5037169456481934
+
+Recommended Track: 091268.mp3 - Similarity Score: 0.5423231720924377
+
+Recommended Track: 092201.mp3 - Similarity Score: 0.5428546667098999
+
+
+
 **Contributors:**
 
 •	**M.Muttayab** (22i-1949)
